@@ -23,7 +23,7 @@ disease-mapping2019.txt----------The disease mapping between HMDD v3.1 and HMDD 
 prediction_conbined.xlsx----------The prediction scores of the top predictors and the combined predictor, in HMDD v2.0 format
 Max_Min data----------the Max_Min normalized predcition results of 36 predictors
 Sigmoid data----------the Sigmoid normalized predcition results of 36 predictors
-Yuanshi data----------the original  predcition results of 36 predictors
+Original data----------the original  predcition results of 36 predictors
 Z_score data----------the Z_score normalized predcition results of 36 predictors
 
 Announcements: when you run the code, you need to pay attention to setting the correct file path.
