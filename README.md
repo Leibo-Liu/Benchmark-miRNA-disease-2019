@@ -8,7 +8,7 @@ ROC.py----------calculate AUROC and plot ROC charts
 Max_min data.py----------iterative integration of predictors using their Max_min normalized results 
 Sigmoid data.py----------iterative integration of predictors using their Sigmoid normalized results 
 Z_score data.py----------iterative integration of predictors using their Z_score normalized results 
-Yuanshi data.py----------iterative integration of predictors using their original results
+Original data.py----------iterative integration of predictors using their original results
 
 Required libraries: numpy, pandas, os, glob, matplotlib, sklearn
 
