@@ -61,7 +61,7 @@ if __name__ == '__main__':
     predicted = []
     predictor = predictors[0]
     predicted.append(predictors[0])
-    data = pd.read_table("./normalization_data/Yuanshi data/"+predicted[0]+"_causality3.txt",header=None)
+    data = pd.read_table("./normalization_data/Original data/"+predicted[0]+".txt",header=None)
     data.columns =["Disease","miRNA","Scort","y_ture","Feature_scort"]
     data = data.drop_duplicates(subset=["Disease","miRNA"])
     inte_v = data.iloc[:,0:2]
@@ -73,13 +73,13 @@ if __name__ == '__main__':
         pr_auc = 0
         DB = []
         
-        data = pd.read_table("./normalization_data/Yuanshi data/"+predicted[i-1]+"_causality3.txt",header=None)
+        data = pd.read_table("./normalization_data/Original data/"+predicted[i-1]+".txt",header=None)
         data.columns=["Disease","miRNA","Scort","y_ture","Feature_scort"]
         vs[i-1] = data.drop_duplicates(subset=["Disease","miRNA"])
         
         for j in range(1,len(predictors)):
             if predictors[j] not in predicted:
-                data = pd.read_table("./normalization_data/Yuanshi data/"+predictors[j]+"_causality3.txt",header=None)
+                data = pd.read_table("./normalization_data/Original data/"+predictors[j]+".txt",header=None)
                 data.columns =["Disease","miRNA","Scort","y_ture","Feature_scort"] 
                 data= data.drop_duplicates(subset=["Disease","miRNA"])
                 
@@ -125,6 +125,6 @@ if __name__ == '__main__':
         print(pr_auc)
         
         save_str =  str(i)+"\t"+str(predicted)+"\t"+str(pr_num)+"\t"+str(pr_auc)+"\n"
-        with open("./Results/Yuanshi_data_result.txt","a+") as f:
+        with open("./Results/Original_data_result.txt","a+") as f:
             f.write(save_str)
             f.close()
